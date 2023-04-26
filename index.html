@@ -7,25 +7,29 @@
   <title>Custom events!</title>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-  <style>
-    html {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-  </style>
 </head>
 
 <body>
-  <button id="btn">Click me!</button>
+  <div id="react-app"></div>
+  <div class="login-form-container">
+    <form id="login-form">
+      <label for="">
+        <span>Email</span>
+        <input required type="email" name="email" id="email">
+      </label>
 
-  <script>
-    const btn = document.querySelector('#btn')
-    btn.addEventListener('click', () => {
-      console.log('Clicked')
-    })
-  </script>
+      <label for="password">
+        <span>Password</span>
+        <input required type="password" name="password" id="password">
+      </label>
 
+      <div class="buttons">
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </div>
 
-
+  <div id="vue-app"></div>
   <script type="module" src="/src/main.tsx"></script>
 </body>
 
