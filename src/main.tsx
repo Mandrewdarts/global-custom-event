@@ -1,7 +1,7 @@
 import './style.css';
 // Vue App
 import { App, createApp } from 'vue';
-import VueApp from './vue-app/App.vue';
+import VueApp from './vue-app/App';
 
 // React
 import { App as ReactApp } from './react-app/app';
@@ -19,7 +19,7 @@ appToastEventHandler();
 
 let vueApp: App<any> | undefined;
 
-document.addEventListener('authchange', (e) => {
+document.addEventListener('authchange', (e: any) => {
   if (e.detail.authenticated) {
     // Boot Vue App
     vueApp = createApp(VueApp);

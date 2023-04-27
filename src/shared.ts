@@ -12,6 +12,7 @@ export function appToastEventHandler() {
   document.addEventListener(
     'app-toast',
     (e: any) => {
+      // @ts-ignore
       Toastify({ text: e.detail.text }).showToast();
     },
     { capture: true }
